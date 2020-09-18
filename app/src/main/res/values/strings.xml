@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FizzBuzz</string>
+    <string name="about">About app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="multiautocompletetextview">MultiAutoCompleteTextView</string>
+    <string name="startGame">Start</string>
+
+    <string name="textview">TextView</string>
+    <string name="fizz">Fizz</string>
+    <string name="buzz">Buzz</string>
+    <string name="fizzbuzz">FizzBuzz</string>
+    <string name="next_number">Next Number</string>
+    <string name="number">Number</string>
+    <string name="todo">TODO</string>
+    <string name="About_app">Hi my name is Osman \n</string>
+
+</resources>
