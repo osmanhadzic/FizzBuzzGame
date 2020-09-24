@@ -9,50 +9,52 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#5eb8ff">
 
-    <Button
-        android:id="@+id/StartBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="198dp"
-        android:text="@string/startGame"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/StartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="162dp"
+            android:layout_marginTop="356dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginBottom="198dp"
+            android:background="@drawable/buttonshape"
+            android:text="@string/startGame"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/StartImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="97dp"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toTopOf="@+id/StartBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
+        <ImageView
+            android:id="@+id/StartImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginBottom="97dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/fizzbuzz"
+            app:layout_constraintBottom_toTopOf="@+id/StartBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/abutApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="301dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="534dp"
-        android:background="@android:drawable/ic_menu_help"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/abutApp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="301dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="534dp"
+            android:background="@android:drawable/ic_menu_help"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

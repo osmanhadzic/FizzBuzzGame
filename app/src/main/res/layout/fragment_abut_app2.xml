@@ -9,6 +9,13 @@
     tools:context=".AbutApp">
 
 
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/homeAsUpIndicator"
+        android:gravity="center" />
+
     <TextView
         android:id="@+id/abutApp"
         android:layout_width="match_parent"

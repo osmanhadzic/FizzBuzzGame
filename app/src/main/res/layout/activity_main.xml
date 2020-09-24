@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/mainFragment"
-        android:name="com.example.fizzbuzz.MainFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost="true"

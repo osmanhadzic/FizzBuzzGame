@@ -11,8 +11,12 @@
     <string name="buzz">Buzz</string>
     <string name="fizzbuzz">FizzBuzz</string>
     <string name="next_number">Next Number</string>
-    <string name="number">Number</string>
+    <string name="number">0</string>
     <string name="todo">TODO</string>
     <string name="About_app">Hi my name is Osman \n</string>
+    <string name="game_over">Game Over</string>
+    <string name="new_game">New game</string>
+    <string name="winner">Winner</string>
+    <string name="back">Back</string>
 
 </resources>

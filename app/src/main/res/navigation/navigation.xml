@@ -20,17 +20,29 @@
         android:id="@+id/gameOverFragment"
         android:name="com.example.fizzbuzz.GameOverFragment"
         android:label="fragment_game_over"
-        tools:layout="@layout/fragment_game_over" />
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/winFragment"
         android:name="com.example.fizzbuzz.WinFragment"
         android:label="fragment_win"
-        tools:layout="@layout/fragment_win" />
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/abutApp2"
         android:name="com.example.fizzbuzz.AbutApp"
         android:label="fragment_abut_app2"
-        tools:layout="@layout/fragment_abut_app2" />
+        tools:layout="@layout/fragment_abut_app2" >
+        <action
+            android:id="@+id/action_abutApp2_to_mainFragment2"
+            app:destination="@id/mainFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.fizzbuzz.GameFragment"
