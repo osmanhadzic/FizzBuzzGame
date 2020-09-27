@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
@@ -38,10 +39,14 @@ class WinFragment : Fragment(), View.OnClickListener {
 
     }
 
+
+    override fun onPause() {
+
+    }
  
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.i("TitleFragment", "onDestroyView called")
+
     }
     override fun onDetach() {
         super.onDetach()

@@ -8,17 +8,22 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.databinding.DataBindingUtil
+
+import com.example.fizzbuzz.models.FizzBuzzNum
 import kotlinx.android.synthetic.main.fragment_game.*
 import java.util.*
 import kotlin.random.Random
 import kotlin.random.nextInt
 
+const val LAST_NUM = "lastNumber"
 
 class GameFragment : Fragment(), View.OnClickListener {
 
     var fizzBuzzNum = 0
     lateinit var navController: NavController
 
+    private val fizzBuzzNumber : FizzBuzzNum = FizzBuzzNum(0)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,8 +34,20 @@ class GameFragment : Fragment(), View.OnClickListener {
 
 
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(LAST_NUM,fizzBuzzNum)
+    }
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (savedInstanceState != null) {
+            fizzBuzzNum = savedInstanceState.getInt(LAST_NUM, 0)
+            randNum.text = fizzBuzzNum.toString()
+        }
 
 
         navController = Navigation.findNavController(view)
@@ -43,10 +60,7 @@ class GameFragment : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.fizzBtn).setOnClickListener(this)
     }
 
-    fun genNumber() : Int {
-        return Random.nextInt(1..100)
 
-    }
 
 
 
@@ -54,8 +68,11 @@ class GameFragment : Fragment(), View.OnClickListener {
 
         when(p0!!.id){
             R.id.fizzBtn -> {
-                fizzBuzzNum = genNumber()
-                randNum.text = fizzBuzzNum.toString()
+                if(fizzBuzzNum == 0) {
+                    fizzBuzzNum = fizzBuzzNumber.genNumber()
+
+                    randNum.text = fizzBuzzNum.toString()
+                }
                 if(fizzBuzzNum % 3 == 0){
                     navController.navigate(R.id.action_gameFragment_to_winFragment)
 
@@ -64,8 +81,11 @@ class GameFragment : Fragment(), View.OnClickListener {
                 }
             }
             R.id.buzzBtn -> {
-                fizzBuzzNum = genNumber()
-                randNum.text = fizzBuzzNum.toString()
+                if(fizzBuzzNum == 0) {
+                    fizzBuzzNum = fizzBuzzNumber.genNumber()
+
+                    randNum.text = fizzBuzzNum.toString()
+                }
 
                 if(fizzBuzzNum % 5 == 0){
                     navController.navigate(R.id.action_gameFragment_to_winFragment)
@@ -74,8 +94,11 @@ class GameFragment : Fragment(), View.OnClickListener {
                 }
             }
             R.id.fizzBizzBtn -> {
-                fizzBuzzNum = genNumber()
-                randNum.text = fizzBuzzNum.toString()
+                if(fizzBuzzNum == 0) {
+                    fizzBuzzNum = fizzBuzzNumber.genNumber()
+
+                    randNum.text = fizzBuzzNum.toString()
+                }
 
                 if(fizzBuzzNum % 3 == 0 && fizzBuzzNum % 5 == 0){
                     navController.navigate(R.id.action_gameFragment_to_winFragment)
@@ -83,10 +106,15 @@ class GameFragment : Fragment(), View.OnClickListener {
                     navController.navigate(R.id.action_gameFragment_to_gameOverFragment)
                 }
             }
-            R.id.numTxt -> randNum.text = fizzBuzzNum.toString()
+            R.id.numTxt -> {
+                fizzBuzzNum = fizzBuzzNumber.genNumber()
+                randNum.text = fizzBuzzNum.toString()
+            }
 
         }
     }
+
+
 
 
 }

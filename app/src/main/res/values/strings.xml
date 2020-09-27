@@ -13,7 +13,7 @@
     <string name="next_number">Next Number</string>
     <string name="number">0</string>
     <string name="todo">TODO</string>
-    <string name="About_app">Hi my name is Osman \n</string>
+    <string name="About_app">Pravila \n Prvi broj je slucajan i korisnik pogada izmedu tri ponuden opcije \n Fizz -> Broj je djeljiv sa 3 \n Buzz -> broj je djeljiv sa 5 \n FizzBuzz -> broj je deljiv sa 3 i 5 \n </string>
     <string name="game_over">Game Over</string>
     <string name="new_game">New game</string>
     <string name="winner">Winner</string>
